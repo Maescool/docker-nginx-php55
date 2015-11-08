@@ -1,0 +1,16 @@
+variables:
+  BUILD_NAME: "nginx-php55"
+
+build:
+  type: build
+  script:
+    - "~/data/servant/serve.sh -t docker build"
+  tags: 
+    - docker
+
+deploy:
+  type: deploy
+  script:
+    - "~/data/servant/serve.sh -t docker deploy"
+  tags: 
+    - docker
