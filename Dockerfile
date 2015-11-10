@@ -11,7 +11,7 @@ RUN apt-get install nullmailer --no-install-recommends --yes --force-yes && \
  adduser --system --group fcgi-php --home /var/lib/php5
 
 RUN apt-get -y install nginx
-
+RUN nginx -V
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Define mountable directories.
