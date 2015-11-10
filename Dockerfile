@@ -15,7 +15,7 @@ RUN nginx -V
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Define mountable directories.
-VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/"]
 
 # Define working directory.
 WORKDIR /etc/nginx
